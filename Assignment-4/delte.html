@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI Droppable</title>
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         #draggable-1 { 
+           width: 100px; height: 50px; float: left;
+           margin: 22px 5px 10px 40; text-align: center;
+         }
+         #droppable-1 { 
+            width: 120px; height: 70px;padding: 0 0 0 0; float: left; 
+           margin: 10px; text-align: center;	
+         }
+      </style>
+	  <style type="text/css">
+ body{
+    	background-image:url("header.jpg");
+    	background-repeat: no-repeat;
+    	background-size: 100% auto;
+    	background-color:#7589a8;
+    }
+    #titlehead{
+    	font-family:Georgia;
+    	Color: #5e0687;
+    	text-align:left;
+    	margin-left:40px;
+    }
+    #maindiv{
+    	background-image:url('/header.jpg');
+    	margin:20px 0 0 20px;
+    }
+    nav{
+	background-color: #5e0687;
+	height: 40px;
+	margin: 10px 0 0 40px;	}
+	a{
+	margin: 5px;
+	color: white;
+	margin-left: 18px;
+	}
+aside{
+    float:right;
+    margin-right: 100px;
+    margin-top:15px;
+    }
+div{
+margin-top: 10px;
+margin-left: 50px;
+color: #5e0687;
+}
+
+footer{
+	margin: 90px 0 0 0 ;
+}
+.foot{
+	float:left;
+	margin-top:-70px;
+	color: #870000;
+	font-family: georgia;
+	text-align: center
+
+	}
+#asidefooter{
+	float:right;
+	margin:-70px 40px 0 0px;
+
+	}
+
+</style>
+      <script>
+         $(function() {
+            $( "#draggable-1" ).draggable();
+            $( "#droppable-1" ).droppable({
+			drop: function (){
+			alert ("download the registration form")
+			}
+			})
+			});  
+      </script>
+   </head>
+   <body >
+	<h1 id="titlehead"> E-Z Card</h1>
+<nav>
+	<a href="Mainpage.html"> Home </a>
+		<a href="registercard.html"> Register </a>
+		<a href="ManageAccount.html"> Manage Account </a>
+		<a href="rewards.html"> Rewards Program </a>
+		<a href="ContactUs.html"> Contact Us </a>
+		<a href="registrationform.html"> Registration form </a>
+</nav>
+   <body>
+   <br><br>
+       <div> Download the registration form by dragging the box to target </div>
+      <br><div id="draggable-1" class="ui-widget-content">
+         <p>Drag me to my target</p>
+      </div>
+      <div id="droppable-1" class="ui-widget-header">
+         <p>Drop here</p>
+      </div> <br><br><br><br><br><br><br><br>
+<div>
+ 
+	<a id="dwld" href="Registrationform.pdf" download> <button> Download the registration form </button> </a>
+</div>
+
+   </body>
+</html>

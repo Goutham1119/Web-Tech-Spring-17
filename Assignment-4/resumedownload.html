@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Resume Download</title>
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <style>
+         #draggable-1 { 
+           width: 100px; height: 70px; float: left;
+           margin: 22px 5px 10px 40; text-align: center;
+         }
+         #droppable-1 { 
+            width: 150px; height: 70px;padding: 0 0 0 0; float: right; 
+           margin: 10px; text-align: center;	
+         }
+      </style>
+	  <style type="text/css">
+ body{
+   	background-repeat: no-repeat;
+    	background-size: auto;
+    	background-color:#fce8ed;
+    }
+    #titlehead{
+    	font-family:Georgia;
+    	Color: red;
+    	text-align:left;
+    	margin-left:40px;
+    }
+    
+div{
+margin-top: 10px;
+margin-left: 50px;
+color: Red;
+}
+
+</style>
+      <script>
+         $(function() {
+            $( "#draggable-1" ).draggable();
+            $( "#droppable-1" ).droppable({
+			drop: function (){
+			alert ("Thanks for Confirmation. Your Download Begins Now!!")
+			window.location.href="GowthamResume.pdf";
+			}
+			})
+			});  
+      </script>
+   </head>
+<script>
+	$(document).ready(
+         function() {
+            $( ".btnr" ).on('click',function(){
+         		alert ("Drag and Drop Before Download")
+			});
+});  
+      </script>
+   <body >
+	<h1 id="titlehead"> Gowtham's Resume</h1>
+   <body>
+   
+       <div> Download My Resume by dragging the box to target </div>
+      <br><div id="draggable-1" class="ui-widget-content">
+         <p>Drag Me to Yellow Target</p>
+      </div>
+      <div id="droppable-1" class="ui-widget-header">
+         <p>This is your Yellow Target</p>
+      </div> <br><br><br><br><br><br><br><br>
+<div>
+  <button class="btnr"> Download My Resume </button>
+
+</div>
+
+<br> <br>
+
+<button class="button" onclick="goBack()">Home
+<script src="app.js">
+</script>
+
+   </body>
+</html>
