@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title>Contact Information</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="styles.css">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-96357842-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Gowtham's Blog</a>
+    </div>
+    <ul class="nav navbar-nav">
+<li> <a href="./index.html"> Home </a> </li>
+<li> <a href="./about.html"> About </a> </li>
+<li> <a href="./skills.html"> Skills </a> </li>
+<li> <a class="active" href="./contact.html"> Contact Information </a> </li>
+<li> <a href="./experience.html">Experience </a> </li>
+<li> <a href="./resumedownload.html">Resume Download</a> </li>
+</ul>
+
+<ul class="nav navbar-nav navbar-right">
+<button class="btn btn-primary navbar-btn" onclick="goBack()">Previous Tab</button>
+</ul>
+
+  </div>
+</nav>
+
+
+
+<div id="contact">
+
+<div align="left">
+<h4 style="color: #eb0000;"><i>E-Mail ID: </i>Gowtham.Subramanian1@marist.edu</h4> 
+<br>
+
+<h4 style="color: #eb0000;"><i>Phone Number:</i> +1(516)-288-2204
+
+</h4>
+
+<form action="https://formspree.io/gouthugoutham92@gmail.com" method = "post">
+    <br>  <br> <label for="fname">First Name <span class="glyphicon glyphicon-user"></span></label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." width=30%><br><br>
+
+    <label for="lname">Last Name <span class="glyphicon glyphicon-user"></span></label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." width=30%><br><br>
+	<label for="email">Your email <span class="glyphicon glyphicon-envelope"></span></label>
+	<input type="text" id="email" name="youremail" placeholder = "enter your mail address" width=30%><br><br>
+	
+    <label for="subject">Subject <span class="glyphicon glyphicon-book"></span></label>
+    
+	 		 		<select id="reasonDetails" name="reason">    					
+  					</select><br>
+					<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  					<script>
+						var $select = $('#reasonDetails');
+						$.getJSON("reason.json", function(data) {
+						console.log(data)
+							for(var i=0; i<data['reasonDetails'].length;i++){
+								$select.append('<option id="'+ data['reasonDetails'][i]['id']+'">'+ data['reasonDetails'][i]['name']+'</option>' );
+							}
+						});
+					</script><br>
+	<label for="message">Message <span class="glyphicon glyphicon-pencil"></span></label>
+	<br>
+	<textarea name="message" rows="5" cols="100" placeholder = "Write your message here"></textarea><br>
+	
+    <input type="submit" value="Submit">
+  </form>
+
+
+</body>
+
+
+
+
+</html>
